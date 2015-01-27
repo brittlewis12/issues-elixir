@@ -27,6 +27,7 @@ defmodule Issues.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.5"},
+      {:exjsx, "~> 3.1"},
     ]
   end
 end
