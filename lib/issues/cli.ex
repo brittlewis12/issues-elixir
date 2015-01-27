@@ -9,7 +9,7 @@ defmodule Issues.CLI do
   of the last `n` issues in a github project
   """
 
-  def run(argv) do
+  def main(argv) do
     argv
     |> parse_args
     |> process
@@ -30,7 +30,7 @@ defmodule Issues.CLI do
       {[help: true], _, _}
         -> :help
       {_, [user, project, count], _}
-        -> {user, project, count}
+        -> {user, project, String.to_integer(count)}
       {_, [user, project], _}
         -> {user, project, @default_count}
       _ -> :help
