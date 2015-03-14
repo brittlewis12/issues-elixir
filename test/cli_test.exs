@@ -14,7 +14,7 @@ defmodule CliTest do
   end
 
   test "returns three values if given three values" do
-    assert parse_args(["user", "project", 99]) == {"user", "project", 99}
+    assert parse_args(["user", "project", "99"]) == {"user", "project", 99}
   end
 
   test "returns default count if two values given" do
